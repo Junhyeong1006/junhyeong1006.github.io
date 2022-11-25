@@ -198,3 +198,7 @@ This theme is licensed under the [MIT license](https://opensource.org/licenses/m
 [jekyll-sitemap]: https://github.com/jekyll/jekyll-sitemap
 [jekyll-feed]: https://github.com/jekyll/jekyll-feed
 [highlight-js]: https://github.com/highlightjs/highlight.js
+
+
+![dancing-dave-minion-510835__480](https://user-images.githubusercontent.com/105621923/203976796-f3ce59bf-6888-4e21-8e9c-6940754ff4e2.jpg)
+
