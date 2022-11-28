@@ -44,18 +44,18 @@ localhost:4000 접속하여 블로그와 테마가 잘 작동하는지 확인한
 Disqus 사이트에 들어간다.
 
 Disqus 가입 & 세팅 (platform : jekyll 선택)
-_config.yml 파일 수정
-
+_config.yml 에 아래 코드를 추가해 파일 수정
+```
 comment:
   provider: "disqus"
   disqus:
     shortname: "junhyeong"
-
+```
 disqus 홈페이지에서 Universal Code를 _layouts/post.html 에 적용 (PAGE_URL과 PAGE_IDENTIFIER은 나의 정보에 맞게 수정)
 
 내가 만든 각 post파일들에 아래의 코드 추가
 comments: true
-#
+
 ## 5. favicon 추가
 
 favicon으로 추가할 이미지를 준비한다.  
@@ -74,8 +74,8 @@ _includes에 새로운 파일의 head.html에
 
 #
 ## 6. Google analytics 구현 
-[알고싶으면 드러와]()
+[알고싶으면 드러와](https://junhyeong1006.github.io/jekyll/update/2022/11/28/Google-analytics.html)
 
 #
 ## 7. topic post 생성
-[내용이 궁금하면 드러와]()
+[내용이 궁금하면 드러와](https://junhyeong1006.github.io/jekyll/update/2022/11/25/special-lecture.html)
