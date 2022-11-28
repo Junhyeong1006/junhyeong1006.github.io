@@ -17,7 +17,7 @@ comments: true
 4. 관리 -> 관리자 -> 속성 -> 데이터 스트림에서 측정ID를 복사
 
 5. _config.yml 파일에 아래 코드 추가
-```html
+```
 analytics:
 provider               : "google-gtag" 
 google:
@@ -25,7 +25,7 @@ google:
 includes/head.html
 ```
 6. includes 폴더에 analytics 파일을 생성하고 아래 코드 추가
-<!-- Google tag (gtag.js) -->
+```
     <script async src="https://www.googletagmanager.com/gtag/js?id=복사한 측정ID"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
@@ -34,3 +34,4 @@ includes/head.html
 
     gtag('config', '');
     </script>
+    ```
