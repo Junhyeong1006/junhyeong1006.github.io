@@ -6,7 +6,7 @@ categories: jekyll update
 comments: true
 ---
 
-#  Git
+##  Git
 
 
 Git은 가장 일반적으로 사용되는 버전 관리 시스템(version control system)입니다. Git은 파일에 대한 변경 내용을 추적하므로 수행된 작업에 대한 기록이 있으며 필요할 경우 특정 버전으로 되돌릴 수 있습니다. Git은 또한 협업을 더 쉽게 만들어 여러 사람의 변경 사항을 모두 하나의 소스로 병합할 수 있게 합니다.
@@ -21,7 +21,7 @@ Git이 파일에 대한 변경 사항 목록을 보관하는 것으로 생각해
 
 Git repo의 복사본을 온라인 위의 호스트(e.g. GitHub, Bitbucket)에 함께 저장하면 변경사항을 업로드하고 다른 개발자의 변경사항을 다운로드할 수 있게 됩니다. 즉, 이는 여러 개발자 사이 중앙에 위치에 있으므로 다른 개발자와 보다 쉽게 협업할 수 있습니다. 원격 Repository를 설정한 후에는 파일 및 수정사항 기록을 업로드(push)합니다. 다른 사용자가 원격 보고서를 변경한 후 변경 내용을 로컬 보고서로 다운로드(pull)할 수 있습니다.  
 
-# Github
+## Github
 
 ![img](https://user-images.githubusercontent.com/105621923/204204902-a09c9133-de98-44db-a053-28d35c0267f4.png)
 
@@ -46,7 +46,7 @@ GitHub의 인터페이스는 Git 작업을 수행하고 파일 기록을 볼 수
 GitHub 사용자들에게 Github는 단순히 코드를 작업하는 장소가 아닙니다. 모든 GitHub 사용자는 자신의 프로젝트, 기여 및 활동을 사이트에 표시할 수 있는 프로필을 가지고 있으며 모든 사용자의 공개 프로필 및 Repository를 볼 수 있습니다.
 
 
-# Markdown
+## Markdown
 
 
 ![Markdown-mark svg](https://user-images.githubusercontent.com/105621923/204204223-b47e54bd-c807-4d5f-962d-7aede08fb776.png)
@@ -65,7 +65,7 @@ Markdown은 마크업 언어로, 텍스트를 통해 문서의 형태를 명시�
 Reddit 및 GitHub와 같은 웹 사이트는 Markdown을 지원하며 많은 데스크톱 및 웹 기반 응용 프로그램이 이를 지원합니다.
 
 
-# Jekyll
+## Jekyll
 
 ![jekyll-thumbnail](https://user-images.githubusercontent.com/105621923/204202763-4a234ca0-4c4e-4c9f-b946-d0299e1575b5.jpg)
 
