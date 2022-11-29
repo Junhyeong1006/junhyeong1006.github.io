@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="/jekyll-theme-yat/feed.xml" rel="self" type="application/atom+xml" /><link href="/jekyll-theme-yat/" rel="alternate" type="text/html" /><updated>2022-11-29T05:12:18+00:00</updated><id>/jekyll-theme-yat/feed.xml</id><title type="html">junhyeong’s blog</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Google analytics 추가</title><link href="/jekyll-theme-yat/jekyll/update/2022/11/28/Google-analytics.html" rel="alternate" type="text/html" title="Google analytics 추가" /><published>2022-11-28T16:34:30+00:00</published><updated>2022-11-28T16:34:30+00:00</updated><id>/jekyll-theme-yat/jekyll/update/2022/11/28/Google%20analytics</id><content type="html" xml:base="/jekyll-theme-yat/jekyll/update/2022/11/28/Google-analytics.html"><![CDATA[<h1 id="google-analytics-추가">Google analytics 추가</h1>
+
+<ol>
+  <li>
+    <p>google analytics 홈페이지에 접속후 애널리틱스 계정을 만든다.</p>
+  </li>
+  <li>
+    <p>“관리”에서 새로운 Google 애널리틱스 속성을 만든다.</p>
+  </li>
+  <li>
+    <p>“관리”에서 새로운 데이터 스트림을 추가한다. 웹을 클릭하고 스트림을 추가하기 위한 설정을 완료한다.</p>
+  </li>
+  <li>
+    <p>관리 -&gt; 관리자 -&gt; 속성 -&gt; 데이터 스트림에서 측정ID를 복사</p>
+  </li>
+  <li>_config.yml 파일에 아래 코드 추가
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>analytics:
+provider               : "google-gtag" 
+google:
+ tracking_id          : "G-MN3R6WW2Q3"
+includes/head.html
+</code></pre></div>    </div>
+  </li>
+  <li>includes 폴더에 analytics 파일을 생성하고 아래 코드 추가
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &lt;script async src="https://www.googletagmanager.com/gtag/js?id=복사한 측정ID"&gt;&lt;/script&gt;
+ &lt;script&gt;
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+
+ gtag('config', '');
+ &lt;/script&gt;
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p><img src="https://user-images.githubusercontent.com/105621923/204349507-b22e2b2e-d8d1-4c35-9844-8256d5fb3dda.png" alt="image" /></p>]]></content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[Google analytics 추가]]></summary></entry><entry><title type="html">special-lecture(With Git/Github, Markdown, Jekyll)</title><link href="/jekyll-theme-yat/jekyll/update/2022/11/25/special-lecture.html" rel="alternate" type="text/html" title="special-lecture(With Git/Github, Markdown, Jekyll)" /><published>2022-11-25T08:57:30+00:00</published><updated>2022-11-25T08:57:30+00:00</updated><id>/jekyll-theme-yat/jekyll/update/2022/11/25/special-lecture</id><content type="html" xml:base="/jekyll-theme-yat/jekyll/update/2022/11/25/special-lecture.html"><![CDATA[<h2 id="git">Git</h2>
+
+<p>Git은 가장 일반적으로 사용되는 버전 관리 시스템(version control system)입니다. Git은 파일에 대한 변경 내용을 추적하므로 수행된 작업에 대한 기록이 있으며 필요할 경우 특정 버전으로 되돌릴 수 있습니다. Git은 또한 협업을 더 쉽게 만들어 여러 사람의 변경 사항을 모두 하나의 소스로 병합할 수 있게 합니다.</p>
+
+<h3 id="git의-특징">Git의 특징</h3>
+
+<p>Git은 로컬로 실행되는 소프트웨어입니다. 파일과 파일 기록이 컴퓨터에 저장됩니다. 또한 온라인 호스트(예: GitHub 또는 Bitbucket)를 사용하여 파일의 복사본과 해당 수정 기록을 저장할 수 있습니다. 변경사항을 업로드하고 다른 개발자의 변경사항을 다운로드할 수 있는 중앙 위치에 있으므로 다른 개발자와 더 쉽게 협업할 수 있습니다. Git은 자동으로 변경 사항을 병합할 수 있으므로 두 사람이 같은 파일의 다른 부분을 작업하고 나중에 서로의 작업을 잃지 않고 변경 사항을 병합할 수 있습니다.</p>
+
+<p>Git이 파일에 대한 변경 사항 목록을 보관하는 것으로 생각해봅시다. 그럼 Git에게 어떻게 변경 사항을 기록하라고 할까요? 이때 파일 또는 파일 집합에 대해 기록된 각 변경 사항을 Commit이라고 합니다. Commit을 진행하기 전에 Git에게 어떤 파일을 commit할지 알려주어야합니다. 이를 스테이징(Staging)이라고 하며 add 명령을 통해 진행할 수 있습니다.</p>
+
+<p>Git repo의 복사본을 온라인 위의 호스트(e.g. GitHub, Bitbucket)에 함께 저장하면 변경사항을 업로드하고 다른 개발자의 변경사항을 다운로드할 수 있게 됩니다. 즉, 이는 여러 개발자 사이 중앙에 위치에 있으므로 다른 개발자와 보다 쉽게 협업할 수 있습니다. 원격 Repository를 설정한 후에는 파일 및 수정사항 기록을 업로드(push)합니다. 다른 사용자가 원격 보고서를 변경한 후 변경 내용을 로컬 보고서로 다운로드(pull)할 수 있습니다.</p>
+
+<h2 id="github">Github</h2>
+
+<p><img src="https://user-images.githubusercontent.com/105621923/204204902-a09c9133-de98-44db-a053-28d35c0267f4.png" alt="img" /></p>
+
+<p>Github는 원격 저장소를 호스팅하는 플랫폼입니다. 소프트웨어 프로젝트를 저장, 추적 및 협업하는 데 사용됩니다. 이를 통해 개발자는 자신의 코드 파일을 업로드하고 오픈 소스 프로젝트에서 동료 개발자와 협업할 수 있습니다. 또한 GitHub는 개발자들이 공개적으로 네트워크 연결, 협업 및 작업 피칭을 할 수 있는 소셜 네트워킹 사이트 역할을 합니다.</p>
+
+<p>GitHub를 통해 소프트웨어 개발자와 엔지니어는 무료로 클라우드에 원격 공용 저장소(Remote Public Repository)를 만들 수 있습니다. GitHub에 Repository를 설정한 후에는 장치로 복사하고 로컬에서 파일을 추가 및 수정한 다음 변경 내용이 대중에게 표시되는 Repository에 변경 내용을 “push”할 수 있습니다.</p>
+
+<h3 id="github의-장점-i---협업의-효율화">Github의 장점 I - 협업의 효율화</h3>
+
+<p>GitHub는 몇 명, 수십 명, 심지어 수천 명의 개발자가 다른 사람의 작업을 무시하거나 변경 사항을 추적할 걱정 없이 프로젝트에 원활하게 기여할 수 있는 Centralized Workspace을 제공합니다.</p>
+
+<h3 id="github의-장점-ii---쉬운-파일-관리">Github의 장점 II - 쉬운 파일 관리</h3>
+
+<p>GitHub의 인터페이스는 Git 작업을 수행하고 파일 기록을 볼 수 있는 깨끗하고 사용자 친화적인 수단을 제공합니다. 이것은 개발자에게 더 편리하고 Git에 정통한 초보자에게 더 쉽게 접근할 수 있습니다.</p>
+
+<h3 id="github의-장점-iii---엔지니어들의-sns">Github의 장점 III - 엔지니어들의 SNS</h3>
+
+<p>GitHub 사용자들에게 Github는 단순히 코드를 작업하는 장소가 아닙니다. 모든 GitHub 사용자는 자신의 프로젝트, 기여 및 활동을 사이트에 표시할 수 있는 프로필을 가지고 있으며 모든 사용자의 공개 프로필 및 Repository를 볼 수 있습니다.</p>
+
+<h2 id="markdown">Markdown</h2>
+
+<p><img src="https://user-images.githubusercontent.com/105621923/204204223-b47e54bd-c807-4d5f-962d-7aede08fb776.png" alt="Markdown-mark svg" /></p>
+
+<p>Markdown은 마크업 언어로, 텍스트를 통해 문서의 형태를 명시하는 방법입니다.</p>
+
+<p>마크다운은 다양한 분야에서 사용될 수 있습니다. 사람들은 웹 사이트, 문서, 노트, 책, 프리젠테이션, 전자 메일 메시지 및 기술 문서를 만드는 데 사용합니다.</p>
+
+<p>마크다운은 가볍습니다. .doc은 MS Word, .hwp는 한글을 통해 열어야하죠. 하지만 마크다운 형식의 텍스트가 들어 있는 파일은 거의 모든 응용 프로그램을 사용하여 열 수 있습니다. 이는 MS Word와 같은 워드 프로세싱 응용 프로그램이 콘텐츠를 독점 파일 형식으로 잠그는 것과 극명한 대조를 보입니다.</p>
+
+<p>마크다운은 플랫폼에 의존하지 않습니다. 운영 체제를 실행하는 모든 장치에서 마크다운 형식의 텍스트를 만들 수 있습니다.</p>
+
+<p>마크다운을 사용하면 미래 걱정이 없습니다. 사용 중인 응용 프로그램이 나중에 작동을 중지하더라도 텍스트 편집 응용 프로그램을 사용하여 마크다운 형식의 텍스트를 읽을 수 있습니다. 이것은 책, 대학 논문, 그리고 무기한 보존이 필요한 다른 중요한 문서들에 관한 중요한 고려 사항입니다.
+마크다운은 어디에나 있습니다.</p>
+
+<p>Reddit 및 GitHub와 같은 웹 사이트는 Markdown을 지원하며 많은 데스크톱 및 웹 기반 응용 프로그램이 이를 지원합니다.</p>
+
+<h2 id="jekyll">Jekyll</h2>
+
+<p><img src="https://user-images.githubusercontent.com/105621923/204202763-4a234ca0-4c4e-4c9f-b946-d0299e1575b5.jpg" alt="jekyll-thumbnail" /></p>
+
+<p>Jekyll이란 Ruby 기반 정적 웹사이트 생성기를 말합니다.</p>
+
+<p>Markdown, Liquid, HTML&amp;CSS를 넣으면, 바로 게시할 수 있는 사이트가 완성됩니다.</p>
+
+<p>고유주소, 카테고리, 페이지, 포스트, 사용자 레이아웃 등의 기능이 기본적으로 포함되어 있습니다.</p>]]></content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[Git]]></summary></entry><entry><title type="html">안녕하세요^^ 반가워요</title><link href="/jekyll-theme-yat/jekyll/update/2022/11/25/%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94-%EB%B0%98%EA%B0%80%EC%9B%8C%EC%9A%94.html" rel="alternate" type="text/html" title="안녕하세요^^ 반가워요" /><published>2022-11-25T05:15:19+00:00</published><updated>2022-11-25T05:15:19+00:00</updated><id>/jekyll-theme-yat/jekyll/update/2022/11/25/%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94%5E%5E%20%EB%B0%98%EA%B0%80%EC%9B%8C%EC%9A%94</id><content type="html" xml:base="/jekyll-theme-yat/jekyll/update/2022/11/25/%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94-%EB%B0%98%EA%B0%80%EC%9B%8C%EC%9A%94.html"><![CDATA[<h2 id="안녕하세요-반가워요-형이에요-o">안녕하세요^^ 반가워요 형이에요 @==^o^==@</h2>
+
+<h2 id="블로그-첫-글이내요--앞으로-매일매일-글-마니-쓸게ㅐ요사실-아님-뿅">블로그 첫 글이내요 ~ 앞으로 매일매일 글 마니 쓸게ㅐ요(사실 아님) 뿅~~</h2>
+
+<h2 id="블로그-만히-찾아와주새요--우리-서로-이웃해요-ㅎㅎㅎㅎ">블로그 만히 찾아와주새요 ~~ 우리 서로 이웃해요 ㅎㅎㅎㅎ~</h2>
+
+<h2 id="여러분-사랑해요">여러분 사랑해요!!)))~~~</h2>]]></content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[안녕하세요^^ 반가워요 형이에요 @==^o^==@]]></summary></entry></feed>
